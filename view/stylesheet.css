@@ -1,0 +1,254 @@
+body {
+    background-image: url(images/loterij.png);
+    background-size: cover;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-repeat: no-repeat;
+    animation: pop-up 3s;
+}
+
+.parent {
+    margin: 0 auto;
+    padding: 30px 220px 30px 220px;
+}
+
+.parent h1 {
+    color: white;
+    text-align: center;
+}
+
+.parent .undertitle {
+    color: rgb(75, 234, 144);
+    background-color: black;
+    text-align: center;
+}
+
+.child {
+    background-image: url("images/seamless-space.jpg");
+    background-repeat: repeat;
+    border-radius: 3px;
+    padding: 20px 100px 20px 100px;
+    box-shadow: 0px 10px rgba(0, 0, 0, 0.13);
+}
+
+.quizcontainer {
+    background-color: rgba(255, 255, 255, 0.941);
+    border-radius: 3px;
+    box-shadow: 0px 10px rgba(0, 0, 0, 0.292);
+    margin: 0 auto;
+    padding: 15px 100px 15px 0px;
+}
+
+.quizcontainer input[type=submit] {
+    background-color: rgb(84, 84, 248);
+    font-size: 17px;
+    box-shadow: 0px 5px rgba(0, 0, 0, 0.084);
+    font-weight: 1000;
+    color: white;
+    padding: 8px 12px 8px 12px;
+    margin: 10px 40px 10px 40px;
+    width: 350px;
+    border-radius: 10px;
+    border: 0px solid white;
+    cursor: pointer;
+
+}
+
+.quizcontainer h2 {
+    font-size: 22px;
+    padding: 0px 0px 10px 0px;
+    border-bottom: 3px dotted rgba(0, 0, 0, 0.788);
+    font-style: italic;
+
+}
+
+.quizcontainer ul li{
+    list-style: none;
+    font-size: 15px;
+    font-weight: 100;
+    color: #0060df;
+
+}
+
+/* Egemen's Code INC. */
+
+input {
+    width: 400px;
+    height: 40px;
+    }
+    
+form {
+text-align: center;
+}
+
+input[type=submit] {
+background-color: blue;
+border-radius: 4px;
+color: white;
+}
+
+a {
+text-decoration: none;
+}
+
+@keyframes pop-up {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes animatie {
+    0% {transform: translateY(0%)}
+    100% {transform: translateY(-10%)}
+}
+
+button {
+    background-color: white;
+    border: hidden;
+    border-radius: 13px;
+    padding: 8px 34px 8px 34px;
+}
+
+button:hover {
+    opacity: 0.8;
+    animation: animatie 1.5s linear;
+}
+
+h1 {color: blue;}
+
+.div1 {
+    margin: 0 auto;
+    margin-top: 15px;
+    text-align: center;     
+    
+}
+
+. {
+    background-color: black;
+    margin: 0 auto;
+    width: 25%;
+    margin-top: 10%;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+}
+.div3 a {
+color:white;
+float: right;
+margin-top: -10%;
+text-decoration: none;
+}
+.div4 a {
+color:white;
+float: right;
+margin-top: -7%;
+text-decoration: none;
+}
+.div5 a {
+color:white;
+float: right;
+margin-top: -4%;
+text-decoration: none;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+.div3 a :hover {
+    opacity: 0.8;
+}
+.div4 a :hover {
+    opacity: 0.8;
+}
+.div5 {
+    margin: 0 auto;
+    margin-top: 35px;
+    text-align: center;     
+    
+}
+
+
+input {
+width: 400px;
+height: 40px;
+
+
+}
+
+form {
+text-align: center;
+
+}
+
+h2 {
+margin-top: 100px;
+background-color: white;
+color: black;
+width: 20px;
+height: 20px;
+padding: 40px;
+}
+
+.div2 {
+margin-top: 90px;
+}
+
+
+#image {
+top: 30%;
+left: 41%;
+position: absolute;
+display: none;
+}
+
+#button2 {
+float: right;
+display: none;
+}
+
+img {
+animation: animation2 1.5s 0.4s  forwards;
+}
+
+@keyframes animation2 {
+0% {opacity: 1;}
+100% {opacity: 0;}
+}
+
+.leaderboard {
+    background-color: rgba(255, 255, 255, 0.956);
+    text-align: center;
+    padding: 12px 0px 40px 0px;
+    border-radius: 2px;
+    box-shadow: 0px 2px black;
+    margin: 25px 0px 25px 0px;
+}
+
+.parentContainer--Head {
+    max-width: 800px;
+    margin: 0 auto;
+
+}
+
+.header nav ul {
+    text-align: right;
+}
+
+.header nav ul li {
+    list-style: none;
+    text-transform: capitalize;
+    padding: 6px 12px 6px 12px;
+}
+
+.header nav ul li a {
+    font-size: 20px;
+}
+
+span.idparticipant {
+    font-size: 20px;
+    padding: 4px 12px 4px 12px;
+    border-bottom: 3px solid black;
+}
+
+.leaderboardnames {
+    padding: 12px;
+}
