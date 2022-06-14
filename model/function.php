@@ -44,3 +44,13 @@ function saveanswers() {
 if(isset($_POST['vraag1'])) {
     saveanswers();
 }
+<?php
+include 'config.php';
+
+function participant() {
+global $pdo;
+$leaderboard = $pdo-> query('SELECT * FROM participants;')
+->fetchAll(PDO::FETCH_ASSOC);
+
+return $leaderboard;
+ }
