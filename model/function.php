@@ -45,7 +45,7 @@ if(isset($_POST['vraag1'])) {
     saveanswers();
 }
 <?php
-include 'config.php';
+include 'secure/config.php';
 
 function participant() {
 global $pdo;
