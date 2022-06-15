@@ -17,9 +17,7 @@ $options = [
 try {                                               
     $pdo = new PDO($dsn, $user, $pass, $options);
 
-    if($pdo){
-        echo "Made connection";
-    }
+    
 } 
 
 catch (\PDOException $e) {

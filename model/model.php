@@ -49,8 +49,73 @@ include 'secure/config.php';
 
 function participant() {
 global $pdo;
-$leaderboard = $pdo-> query('SELECT * FROM participants;')
+$leaderboard = $pdo-> query('SELECT * FROM participants')
 ->fetchAll(PDO::FETCH_ASSOC);
 
 return $leaderboard;
- }
+}
+
+function inlogAction(){
+
+   
+    if(isset($_POST['username']))
+    { 
+       global $pdo;
+        $name = filter_input(INPUT_POST,'username');//$_POST['name'];
+    
+        $password = filter_input(INPUT_POST,'password');//$_POST['password'];
+        $hashed_password = hash('sha256',$password);
+    
+        $sql = 'SELECT name, password FROM participants
+        WHERE name = :name';
+        $statement = $pdo->prepare($sql);
+    
+        $statement->bindParam(':name',$name);
+        $statement->execute();
+        $user = $statement->fetch(PDO::FETCH_ASSOC);
+        if(is_array($user))
+        {
+    
+                if($user['password']==$hashed_password)
+                {
+                    $_SESSION['username']=$name;
+                    if(isset($_SESSION['username'])) {
+
+                       
+                        echo '<a href="?action=logout"><div class="Spel">log uit</div></a>';
+                        
+                           
+                        
+                    }
+                  
+                
+                }
+       
+   
+            else{     
+                
+                echo '<a href="?action=login" target="blank"><div class="Spel">registreer/login</div></a>';
+              include 'FoutInlog.php';
+                
+                
+                }
+            }
+            else{
+                include 'FoutInlog.php';
+                
+            }
+        }
+        else
+        {
+            include 'view/form.php';
+            
+        }
+    }
+ 
+    function uitlogAction(){
+        session_unset();
+        if(isset($_SESSION)){
+            session_destroy();
+    
+        }}
+ 

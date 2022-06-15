@@ -10,7 +10,7 @@
         <li><a href="prijzen.php">Prijzen</a></li>
         <li><a href="?action=leaderboard">Participants</a></li>
         <li><a href="?action=quiz">Quiz</a></li>
-        <li><a href="?action=form">Account</a></li>
+       <li><a href="?action=form">Account</a></li>
     </ul>
 </nav>
 </div>
@@ -31,23 +31,30 @@
 
 session_start();
 
-$function = filter_input(INPUT_GET, 'action');
-function uitlogAction(){
-    session_unset();
+require 'model/model.php';
 
-    if(isset($_SESSION)){
-        session_destroy();
-    }}
+
+$function = filter_input(INPUT_GET, 'action');
+
+
+   
+    
 
 
 
 switch($function){
     case "login":
-        inlogaction();
+        inlogAction();
+
         break;
 
     case "uitlog":
-        uitlogaction();
+        if(isset($_SESSION['username'])) {
+            uitlogaction();
+            }
+        else{
+                echo "Werkt niet.";
+        }
         break;
 
     case "form":

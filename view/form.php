@@ -6,7 +6,7 @@
 
 
     <div class="div5">
-    <form method="post">
+    <form method="post" action= "?action=login">
         <input type="text" name="username" id="" placeholder="Username" required>
         <br>
         <br>

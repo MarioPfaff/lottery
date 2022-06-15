@@ -121,7 +121,7 @@ h1 {color: blue;}
     
 }
 
-. {
+ /* {
     background-color: black;
     margin: 0 auto;
     width: 25%;
@@ -130,7 +130,7 @@ h1 {color: blue;}
     color: white;
     padding: 10px;
     border-radius: 8px;
-}
+} */
 .div3 a {
 color:white;
 float: right;
